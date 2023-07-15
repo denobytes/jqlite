@@ -18,7 +18,7 @@ deno run --allow-read 'https://deno.land/x/jqlite/cli.ts' '.' test.json
 example:
 
 ```
-echo {"a": "b"} | deno run --allow-read 'https://deno.land/x/jqlite/cli.ts' '.a' test.json
+echo '{"a": "b"}' | deno run --allow-read 'https://deno.land/x/jqlite/cli.ts' '.a'
 b
 ```
 

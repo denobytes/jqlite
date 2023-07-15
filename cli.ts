@@ -1,5 +1,5 @@
 import { parse as argparse } from "https://deno.land/std@0.181.0/flags/mod.ts";
-import { default as jq } from "npm:jq-web-wasm/jq.wasm";
+import { default as jq } from "npm:jq-web-wasm@0.5.3/jq.wasm";
 
 const args = argparse(Deno.args, {
   boolean: [
