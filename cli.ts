@@ -1,10 +1,12 @@
 import { parse as argparse } from "https://deno.land/std@0.181.0/flags/mod.ts";
 import { default as jq } from "npm:jq-web-wasm@0.5.3/jq.wasm";
+import cheatsheetjson from "./cheatsheet.json" assert { type: "json" };
 
 const args = argparse(Deno.args, {
   boolean: [
     // instructions for this script
     "help",
+    "cheatsheet",
   ],
   string: [
     // output options
@@ -23,14 +25,17 @@ based on https://www.npmjs.com/package/jq-web-wasm
 
 Options:
   --help              Show this help message
+  --cheatsheet        Show me more
 
   Examples:
   ${commandName} '.' test.json
   cat test.json | ${commandName} '.'
+  ${commandName} --cheatsheet | ${commandName} '.cheatsheet'
 `;
 
 // parse args
 const help = args.help;
+const cheatsheet = args.cheatsheet;
 const readStdin = args._.length < 2;
 const outputFilename = args.output || args.o;
 
@@ -38,6 +43,11 @@ let jsonStr = "";
 
 if (help) {
   console.log(usageMessage);
+  Deno.exit();
+}
+
+if (cheatsheet) {
+  console.log(JSON.stringify(cheatsheetjson, null, "  "));
   Deno.exit();
 }
 

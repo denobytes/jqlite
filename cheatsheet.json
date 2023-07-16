@@ -1,0 +1,27 @@
+{
+	"jq": [
+"https://jqlang.github.io/jq/"
+	],
+	"cheatsheet": [
+"https://tldr.inbrowser.app/pages/common/jq",
+"https://megamorf.gitlab.io/cheat-sheets/jq/",
+"https://www.devtoolsdaily.com/cheatsheets/jq/",
+"https://cameronnokes.com/blog/jq-cheatsheet/"
+	],
+
+	"tutorial": [
+"https://jqlang.github.io/jq/tutorial/",
+"https://www.baeldung.com/linux/jq-command-json",
+"https://earthly.dev/blog/jq-select/",
+"https://shapeshed.com/jq-json/"
+	],
+	"examples": [
+"https://gist.github.com/nntrn/b787f3e14f28de11af45b1c7ec0ffbbc",
+"https://gist.github.com/olih/f7437fb6962fb3ee9fe95bda8d2c8fa4",
+"https://schoeffm.github.io/posts/jq-by-example/",
+"https://codeshack.io/20-useful-jquery-snippets/"
+	],
+	"reference": [
+"https://man.freebsd.org/cgi/man.cgi?query=jq&sektion=1"
+	]
+}
